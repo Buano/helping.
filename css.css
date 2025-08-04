@@ -1,0 +1,275 @@
+/* ========== Reset e Fontes ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8f5e9;
+  color: #2e3d30;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* ========== Paleta de Cores ==========
+  Verde Escuro: #2e7d32
+  Verde Médio: #4caf50
+  Verde Claro: #c8e6c9
+  Verde Extra Claro: #f1fdf4
+  Branco: #ffffff
+  Sombra: rgba(0, 0, 0, 0.1)
+======================================= */
+
+/* ========== Cabeçalho ========== */
+header {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* ========== Seções Gerais ========== */
+section {
+  background-color: white;
+  margin: 40px auto;
+  padding: 35px 25px;
+  max-width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+h2 {
+  color: #2e7d32;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #4caf50;
+  padding-left: 12px;
+}
+
+/* ========== Listas ========== */
+ol {
+  padding-left: 25px;
+  font-size: 1.05rem;
+}
+
+ol li {
+  margin-bottom: 12px;
+}
+
+/* ========== Carrossel ========== */
+.carousel-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  position: relative;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 25px;
+  background-color: #c8e6c9;
+  border-radius: 16px;
+  text-align: center;
+  display: none;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease-in-out;
+}
+
+.carousel-item h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-btn {
+  background: #4caf50;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #388e3c;
+}
+
+/* ========== Propósito ========== */
+.proposito p {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #2e3d30;
+  text-align: center;
+  padding: 10px 0;
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+body.dark .proposito p {
+  color: #ffffff;
+}
+
+/* ========== Rodapé ========== */
+footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4e4e4e;
+  background-color: #dcedc8;
+  padding: 25px 10px;
+  margin-top: 60px;
+  border-radius: 12px;
+}
+
+/* ========== Responsividade ========== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-item {
+    padding: 20px 15px;
+  }
+
+  .carousel-btn {
+    font-size: 20px;
+    padding: 10px 14px;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .carousel-btn {
+    padding: 8px 12px;
+  }
+
+  ol {
+    padding-left: 15px;
+  }
+
+  .carousel-track {
+    max-width: 100%;
+  }
+}
+/* ========== Navbar ========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 0 0 12px 12px;
+}
+
+.nav-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-left a:hover {
+  color: #1b5e20;
+}
+
+.nav-right button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ========== Modo Escuro ========== */
+body.dark {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.dark section {
+  background-color: #2e2e2e;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #33691e, #558b2f);
+}
+
+body.dark .carousel-item {
+  background-color: #3a3a3a;
+}
+
+body.dark .navbar {
+  background-color: #2b2b2b;
+}
+
+body.dark .nav-left a {
+  color: #a5d6a7;
+}
+
+body.dark footer {
+  background-color: #424242;
+  color: #cfcfcf;
+}
